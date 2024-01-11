@@ -13,5 +13,4 @@ public class Tests extends Activity {
         Button test1 = findViewById(R.id.test1);
         Button go_back = findViewById(R.id.go_back);
     }
-
 }
