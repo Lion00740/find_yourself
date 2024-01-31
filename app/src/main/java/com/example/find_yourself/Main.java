@@ -13,6 +13,7 @@ public class Main extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
+        getSupportActionBar().hide();
         Button button = findViewById(R.id.button);
 
         button.setOnClickListener(new View.OnClickListener() {

@@ -13,6 +13,7 @@
         android:theme="@style/Theme.Find_yourself"
         tools:targetApi="31" >
         <activity android:name=".Tests" />
+        <activity android:name=".template_for_test"/>
 
         <activity
             android:name=".Main"
@@ -22,5 +23,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 </manifest>
