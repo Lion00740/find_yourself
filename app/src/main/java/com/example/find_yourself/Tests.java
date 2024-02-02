@@ -13,6 +13,7 @@ public class Tests extends Activity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tests);
+
         Button test1 = findViewById(R.id.test1);
         ImageButton go_back = findViewById(R.id.go_back);
         go_back.setOnClickListener(new View.OnClickListener() {
@@ -30,5 +31,4 @@ public class Tests extends Activity {
             }
         });
     }
-
 }

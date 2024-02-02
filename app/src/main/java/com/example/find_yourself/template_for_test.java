@@ -2,7 +2,9 @@ package com.example.find_yourself;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -14,6 +16,14 @@ public class template_for_test extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.template_test);
+
+        ImageButton imageButton = findViewById(R.id.image_arrow1);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
         RadioGroup[] radioGroups = new RadioGroup[numberOfButtons];
 

@@ -45,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="Какая специальность вам подходит больше?"
+            android:text="Какая специальность вам подходит большеппппппппппппппппппппппппппппппп?"
             android:gravity="center"
             android:textSize="24sp" />
 
@@ -94,10 +94,11 @@
         </RadioGroup>
 
         <ImageButton
-            android:layout_alignParentRight="true"
-            android:src="@drawable/pngwingcom"
+            android:id="@+id/image_arrow1"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
             android:scaleType="centerCrop"
-            android:layout_alignParentBottom="true"/>
+            android:src="@drawable/arrow" />
 </RelativeLayout>
