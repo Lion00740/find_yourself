@@ -6,45 +6,47 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_alignParentRight="true"
         android:layout_width="175dp"
         android:layout_height="175dp"
+        android:layout_alignParentRight="true"
         android:scaleType="centerCrop"
         android:src="@drawable/image_logo" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
 
         <LinearLayout
+            android:id="@+id/first_test"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="4"
-            android:id="@+id/first_test"
-            android:gravity="center">
+            android:gravity="center"
+            android:weightSum="4">
+
             <Button
                 android:id="@+id/test1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="Профессии"/>
+                android:text="@string/first_test"/>
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/second_test"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="4"
+            android:layout_below="@id/first_test"
             android:gravity="center"
-            android:layout_below="@id/first_test">
+            android:weightSum="4">
+
             <Button
                 android:id="@+id/test2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Доп.тест"/>
+                android:text="@string/second_test" />
 
         </LinearLayout>
 
@@ -52,30 +54,32 @@
             android:id="@+id/third_test"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="4"
+            android:layout_below="@id/second_test"
             android:gravity="center"
-            android:layout_below="@id/second_test">
+            android:weightSum="4">
+
             <Button
                 android:id="@+id/test3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Доп.тест"/>
+                android:text="@string/third_test" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="4"
+            android:layout_below="@id/third_test"
             android:gravity="center"
-            android:layout_below="@id/third_test">
+            android:weightSum="4">
+
             <Button
                 android:id="@+id/test4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Доп.тест"/>
+                android:text="@string/fourth_test" />
 
         </LinearLayout>
     </RelativeLayout>
@@ -84,9 +88,9 @@
         android:id="@+id/go_back"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/baseline_arrow_back_24"
         android:layout_alignParentLeft="true"
         android:background="@android:color/transparent"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:src="@drawable/baseline_arrow_back_24" />
 
 </RelativeLayout>

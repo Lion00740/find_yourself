@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">find_yourself</string>
+    <string name="start_button">пройти тестирование</string>
+    <string name="first_test">профессии</string>
+    <string name="second_test">второй тест</string>
+    <string name="third_test">третий тест</string>
+    <string name="fourth_test">четвертый тест</string>
 </resources>
