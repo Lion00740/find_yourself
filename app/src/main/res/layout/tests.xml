@@ -22,15 +22,20 @@
             android:id="@+id/first_test"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
             android:gravity="center"
-            android:weightSum="4">
+            android:padding="12dp"
+            android:weightSum="100">
 
             <Button
                 android:id="@+id/test1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:text="@string/first_test"/>
+                android:layout_weight="30"
+                android:text="@string/first_test" />
         </LinearLayout>
 
         <LinearLayout
@@ -39,13 +44,14 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/first_test"
             android:gravity="center"
-            android:weightSum="4">
+            android:padding="12dp"
+            android:weightSum="100">
 
             <Button
                 android:id="@+id/test2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="15"
                 android:text="@string/second_test" />
 
         </LinearLayout>
@@ -56,13 +62,14 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/second_test"
             android:gravity="center"
-            android:weightSum="4">
+            android:padding="12dp"
+            android:weightSum="100">
 
             <Button
                 android:id="@+id/test3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="15"
                 android:text="@string/third_test" />
 
         </LinearLayout>
@@ -72,13 +79,14 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/third_test"
             android:gravity="center"
-            android:weightSum="4">
+            android:padding="12dp"
+            android:weightSum="100">
 
             <Button
                 android:id="@+id/test4"
-                android:layout_width="wrap_content"
+                android:layout_width="140dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="15"
                 android:text="@string/fourth_test" />
 
         </LinearLayout>
@@ -86,8 +94,8 @@
 
     <ImageButton
         android:id="@+id/go_back"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_alignParentLeft="true"
         android:background="@android:color/transparent"
         android:scaleType="centerCrop"

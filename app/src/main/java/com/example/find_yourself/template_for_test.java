@@ -5,46 +5,38 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
 
 public class template_for_test extends Activity {
-    short numberOfButtons = 5;
+    ArrayList<Question> questionArrayList = new ArrayList<Question>();
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.template_test);
+        setContentView(R.layout.test);
 
-        ImageButton imageButton = findViewById(R.id.image_arrow1);
-        imageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        setInitialData();
 
-            }
-        });
+        ImageButton imageButton = findViewById(R.id.imageButton);
+        ImageView imageView = findViewById(R.id.imageView);
+        RecyclerView recyclerView = findViewById(R.id.rv_id);
 
-        RadioGroup[] radioGroups = new RadioGroup[numberOfButtons];
+        QuestionAdapter questionAdapter = new QuestionAdapter(this, questionArrayList);
 
-        radioGroups[0] = findViewById(R.id.radioGroup1);
-        radioGroups[1] = findViewById(R.id.radioGroup2);
-        radioGroups[2] = findViewById(R.id.radioGroup3);
-        radioGroups[3] = findViewById(R.id.radioGroup4);
-        radioGroups[4] = findViewById(R.id.radioGroup5);
+        recyclerView.setAdapter(questionAdapter);
+    }
 
-        RadioButton[][] radioButtons = new RadioButton[numberOfButtons][numberOfButtons];
+    private void setInitialData(){
+        questionArrayList.add(new Question("привет как дела?"));
 
-        for (int i=0; i < numberOfButtons; i++)
-        {
-            for(int j = 0; j < numberOfButtons; j++)
-            {
-                radioButtons[i][j] = new RadioButton(this);
-                radioButtons[i][j].setWidth(240);
-                radioButtons[i][j].setLayoutParams(new RadioGroup.LayoutParams(RadioGroup.LayoutParams.WRAP_CONTENT, RadioGroup.LayoutParams.WRAP_CONTENT));
-                radioGroups[i].addView(radioButtons[i][j]);
-            }
-        }
+        questionArrayList.add(new Question("привет как дела?"));
 
+        questionArrayList.add(new Question("привет как дела?"));
     }
 }

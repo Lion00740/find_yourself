@@ -1,4 +1,5 @@
 package com.example.find_yourself;
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,11 @@ import java.util.ArrayList;
 public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHolder>{
     private LayoutInflater inflater;
     private ArrayList<Question> questions;
+    QuestionAdapter(Context context, ArrayList<Question> questionArrayList)
+    {
+        this.inflater = LayoutInflater.from(context);
+        this.questions = questionArrayList;
+    }
     @Override
     public QuestionAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = inflater.inflate(R.layout.template_for_question, parent, false);
@@ -35,5 +41,11 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHo
             textView = itemView.findViewById(R.id.question_id);
             RadioGroup radioGroup = itemView.findViewById(R.id.radiogroup_id);
         }
+    }
+
+    public void addQuestion(Question question)
+    {
+        questions.add(question);
+        notifyDataSetChanged();
     }
 }
