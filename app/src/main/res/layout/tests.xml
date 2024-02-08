@@ -1,104 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="175dp"
-        android:layout_height="175dp"
-        android:layout_alignParentRight="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/image_logo" />
-
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true">
+        android:layout_height="0dp"
+        android:layout_below="@+id/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:id="@+id/first_test"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/test1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginEnd="0dp"
-            android:gravity="center"
-            android:padding="12dp"
-            android:weightSum="100">
+            android:text="@string/first_test"
+            app:layout_constraintBottom_toTopOf="@+id/test2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/test1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="30"
-                android:text="@string/first_test" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/second_test"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/test2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/first_test"
-            android:gravity="center"
-            android:padding="12dp"
-            android:weightSum="100">
+            android:text="@string/second_test"
+            app:layout_constraintBottom_toTopOf="@+id/test3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/test1" />
 
-            <Button
-                android:id="@+id/test2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="15"
-                android:text="@string/second_test" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/third_test"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/test3"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/second_test"
-            android:gravity="center"
-            android:padding="12dp"
-            android:weightSum="100">
+            android:text="@string/third_test"
+            app:layout_constraintBottom_toTopOf="@+id/test4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/test2" />
 
-            <Button
-                android:id="@+id/test3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="15"
-                android:text="@string/third_test" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/test4"
+            android:layout_width="140dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/third_test"
-            android:gravity="center"
-            android:padding="12dp"
-            android:weightSum="100">
+            android:text="@string/fourth_test"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/test3" />
 
-            <Button
-                android:id="@+id/test4"
-                android:layout_width="140dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="15"
-                android:text="@string/fourth_test" />
-
-        </LinearLayout>
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageButton
         android:id="@+id/go_back"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_alignParentLeft="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:background="@android:color/transparent"
         android:scaleType="centerCrop"
-        android:src="@drawable/baseline_arrow_back_24" />
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

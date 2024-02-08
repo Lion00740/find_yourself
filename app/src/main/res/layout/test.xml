@@ -14,7 +14,7 @@
         app:layout_constraintBottom_toTopOf="@+id/imageButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -26,19 +26,9 @@
         android:background="@android:color/transparent"
         android:rotationY="180"
         android:scaleType="fitCenter"
+        android:src="@drawable/baseline_arrow_back_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_id"
-        android:src="@drawable/baseline_arrow_back_24"/>
+        app:layout_constraintTop_toBottomOf="@+id/rv_id" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:cropToPadding="true"
-        android:paddingBottom="24dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/image_logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
