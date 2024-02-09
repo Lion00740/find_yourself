@@ -3,35 +3,36 @@ package com.example.find_yourself;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class template_for_test extends Activity {
+public class template_for_test extends AppCompatActivity {
     ArrayList<Question> questionArrayList = new ArrayList<Question>();
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test);
-
+        getSupportActionBar().hide();
         setInitialData();
 
-        ImageButton imageButton = findViewById(R.id.imageButton);
         RecyclerView recyclerView = findViewById(R.id.rv_id);
 
         QuestionAdapter questionAdapter = new QuestionAdapter(this, questionArrayList);
 
         recyclerView.setAdapter(questionAdapter);
-    }
 
+        ImageButton imageButton = findViewById(R.id.imageButton);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+    }
     private void setInitialData() {
         questionArrayList.add(new Question("Чем Вам нравится заниматься в свободное время?", new ArrayList<>(Arrays.asList("Гулять по парку или лесу", "Играть в компьютерные игры", "Общаться с друзьями", "Изучать и анализировать новую информацию", "Читать книги, слушать музыку, рисовать"))));
         questionArrayList.add(new Question("Как Вы предпочитаете проводить отпуск?", new ArrayList<>(Arrays.asList("На пикнике или кемпинге", "В технических парках, на смотровых площадках", "С семьей или друзьями, посещая музеи и развлекательные мероприятия", "Исследуя новые знания и изучая культуру разных стран", "В искусствоведческих экскурсиях, посещая театры и галереи"))));

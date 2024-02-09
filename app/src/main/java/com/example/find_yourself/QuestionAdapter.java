@@ -10,14 +10,18 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHolder>{
     private LayoutInflater inflater;
     private ArrayList<Question> questions;
+    private int[] state;
     QuestionAdapter(Context context, ArrayList<Question> questionArrayList)
     {
         this.inflater = LayoutInflater.from(context);
         this.questions = questionArrayList;
+        this.state = new int[questions.size()];
+        Arrays.fill(state, -1);
     }
     @Override
     public QuestionAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -35,8 +39,59 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHo
         holder.rb3.setText(question.getAnswer(2));
         holder.rb4.setText(question.getAnswer(3));
         holder.rb5.setText(question.getAnswer(4));
-    }
 
+        setRadio(holder, questions.get(position).getState());
+        holder.rb1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                questions.get(position).setState(0);
+                setRadio(holder, questions.get(position).getState());
+            }
+        });
+        holder.rb2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                questions.get(position).setState(1);
+                setRadio(holder, questions.get(position).getState());
+            }
+        });
+        holder.rb3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                questions.get(position).setState(2);
+                setRadio(holder, questions.get(position).getState());
+            }
+        });
+        holder.rb4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                questions.get(position).setState(3);
+                setRadio(holder, questions.get(position).getState());
+            }
+        });
+        holder.rb5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                questions.get(position).setState(4);
+                setRadio(holder, questions.get(position).getState());
+            }
+        });
+    }
+    private void setRadio(ViewHolder holder, int selection)
+    {
+        RadioButton b1 = holder.rb1;
+        RadioButton b2 = holder.rb2;
+        RadioButton b3 = holder.rb3;
+        RadioButton b4 = holder.rb4;
+        RadioButton b5 = holder.rb5;
+
+        if(selection == 0) b1.setChecked(true);
+        if(selection == 1) b2.setChecked(true);
+        if(selection == 2) b3.setChecked(true);
+        if(selection == 3) b4.setChecked(true);
+        if(selection == 4) b5.setChecked(true);
+
+    }
     @Override
     public int getItemCount() {
         return questions.size();

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Question {
     public String nameQuestion;
     public ArrayList<String> arrayAnswers;
+    public int state;
     public Question(String nameQuestion, ArrayList<String> arrayAnswers)
     {
         this.nameQuestion = nameQuestion;
@@ -19,5 +20,12 @@ public class Question {
     public String getAnswer(int position)
     {
         return arrayAnswers.get(position);
+    }
+    public void setState(int i){
+        this.state = i;
+    }
+    public int getState()
+    {
+        return this.state;
     }
 }
