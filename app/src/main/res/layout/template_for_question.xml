@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="10dp">
+    android:padding="10dp"
+    android:background="@drawable/round_bg"
+    android:layout_marginTop="10dp">
 
     <TextView
         android:id="@+id/question_id"
@@ -13,12 +15,14 @@
         android:gravity="center"
         android:textColor="@color/white"
         android:textSize="25sp"
+        android:background="@color/purple_500"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
         android:id="@+id/radiogroup_id"
+        android:background="@color/purple_500"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -28,28 +32,38 @@
 
         <RadioButton
             android:id="@+id/rb1_id"
+            android:textColor="@color/white"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:buttonTint="@color/white"/>
 
         <RadioButton
             android:id="@+id/rb2_id"
+            android:textColor="@color/white"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:buttonTint="@color/white" />
 
         <RadioButton
             android:id="@+id/rb3_id"
+            android:textColor="@color/white"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:buttonTint="@color/white" />
 
         <RadioButton
             android:id="@+id/rb4_id"
+            android:textColor="@color/white"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:buttonTint="@color/white" />
 
         <RadioButton
             android:id="@+id/rb5_id"
+            android:textColor="@color/white"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:buttonTint="@color/white" />
     </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
