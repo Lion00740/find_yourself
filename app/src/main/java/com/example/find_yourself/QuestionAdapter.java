@@ -15,13 +15,10 @@ import java.util.Arrays;
 public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHolder>{
     private LayoutInflater inflater;
     private ArrayList<Question> questions;
-    private int[] state;
     QuestionAdapter(Context context, ArrayList<Question> questionArrayList)
     {
         this.inflater = LayoutInflater.from(context);
         this.questions = questionArrayList;
-        this.state = new int[questions.size()];
-        Arrays.fill(state, -1);
     }
     @Override
     public QuestionAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {

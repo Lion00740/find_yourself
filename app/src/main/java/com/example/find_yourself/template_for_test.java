@@ -1,6 +1,7 @@
 package com.example.find_yourself;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -10,10 +11,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import javax.xml.transform.Result;
+
 public class template_for_test extends AppCompatActivity {
     ArrayList<Question> questionArrayList = new ArrayList<Question>();
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test);
         getSupportActionBar().hide();
@@ -29,7 +32,8 @@ public class template_for_test extends AppCompatActivity {
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(template_for_test.this, ResultTest.class);
+                startActivity(intent);
             }
         });
     }
