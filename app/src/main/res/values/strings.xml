@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">find_yourself</string>
     <string name="start_button">пройти тестирование</string>
+
+    <!-- main screen start -->
+    <string name="hello">мы поможем тебе найти себя!</string>
+    <string name="about">о приложении</string>
+    <!-- main screen end -->
+
     <!-- tests screen start -->
     <string name="first_test">профессии</string>
     <string name="second_test">второй тест</string>

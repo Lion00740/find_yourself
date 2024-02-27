@@ -109,10 +109,4 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHo
             rb5 = itemView.findViewById(R.id.rb5_id);
         }
     }
-
-    public void addQuestion(Question question)
-    {
-        questions.add(question);
-        notifyDataSetChanged();
-    }
 }
