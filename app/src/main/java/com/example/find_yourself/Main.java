@@ -14,9 +14,8 @@ public class Main extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
         getSupportActionBar().hide();
-        Button button = findViewById(R.id.button);
+        Button button = findViewById(R.id.go_test_id);
         Button buttonAbout = findViewById(R.id.about_id);
-
         buttonAbout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -27,6 +26,7 @@ public class Main extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Main.this, template_for_test.class);
+                intent.putExtra("first_test", "-1");
                 startActivity(intent);
             }
         });
