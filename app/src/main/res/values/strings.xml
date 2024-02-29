@@ -20,6 +20,7 @@
     <string name="human_technology">человек-техника</string>
     <string name="human_sign">человек-знаковая система</string>
     <string name="human_art">человек-художественный образ</string>
+    <string name="next_stage">следующий этап</string>
     <!-- result screen end -->
     
     <!-- result screen if human_nature.txt start -->

@@ -25,7 +25,7 @@ public class template_for_test extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.rv_id);
 
         Bundle argument = getIntent().getExtras();
-        int numberOfNextTest = Integer.valueOf(argument.get("first_test").toString());
+        int numberOfNextTest = argument.getInt("first_test");
 
         getData(questionArrayList, numberOfNextTest);
 
@@ -38,7 +38,10 @@ public class template_for_test extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(template_for_test.this, ResultTest.class);
-                intent.putExtra("result", "1");
+                if (numberOfNextTest == -1) {
+                    intent.putExtra("result", questionAdapter.getArrayAnswer());
+                    intent.putExtra("size", questionArrayList.size());
+                }
                 startActivity(intent);
             }
         });
@@ -51,20 +54,20 @@ public class template_for_test extends AppCompatActivity {
 
             switch (numberTest)
             {
-                case 1:
-                    nameTest = "human_art.txt";
+                case 0:
+                    nameTest = "human_technology.txt";
                     break;
-                case 2:
+                case 1:
                     nameTest = "human_human.txt";
                     break;
-                case 3:
+                case 2:
                     nameTest = "human_nature.txt";
                     break;
-                case 4:
+                case 3:
                     nameTest = "human_sign.txt";
                     break;
-                case 5:
-                    nameTest = "human_technology.txt";
+                case 4:
+                    nameTest = "human_art.txt";
                     break;
                 default:
                     nameTest = "test.txt";

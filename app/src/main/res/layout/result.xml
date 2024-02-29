@@ -6,9 +6,15 @@
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/round_bg">
+        android:background="@drawable/round_bg"
+        app:layout_constraintBottom_toTopOf="@+id/nextStage_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/content_start"
             android:layout_width="0dp"
@@ -28,45 +34,49 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.50" />
+            app:layout_constraintGuide_percent="0.50121653" />
 
         <TextView
             android:id="@+id/textView2_id"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@color/purple_500"
             android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/content_percent_50"
             app:layout_constraintStart_toStartOf="@+id/content_start"
             app:layout_constraintTop_toBottomOf="@+id/textView1_id" />
 
         <TextView
             android:id="@+id/textView3_id"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@color/purple_500"
             android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/content_percent_50"
             app:layout_constraintStart_toStartOf="@+id/content_start"
             app:layout_constraintTop_toBottomOf="@+id/textView2_id" />
 
         <TextView
             android:id="@+id/textView1_id"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@color/purple_500"
             android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/content_percent_50"
             app:layout_constraintStart_toStartOf="@+id/content_start"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView4_id"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@color/purple_500"
             android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/content_percent_50"
             app:layout_constraintStart_toStartOf="@+id/content_start"
             app:layout_constraintTop_toBottomOf="@+id/textView3_id" />
 
@@ -75,8 +85,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:background="@color/purple_500"
             android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/content_percent_50"
             app:layout_constraintStart_toStartOf="@+id/content_start"
             app:layout_constraintTop_toBottomOf="@+id/textView4_id" />
@@ -141,9 +153,23 @@
         android:id="@+id/nextStage_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_marginBottom="10dp"
+        android:text="@string/next_stage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/nextStage_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

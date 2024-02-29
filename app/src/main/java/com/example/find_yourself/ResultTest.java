@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ResultTest extends AppCompatActivity {
+    int maxProgress = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,7 +18,8 @@ public class ResultTest extends AppCompatActivity {
         getSupportActionBar().hide();
 
         Bundle arguments = getIntent().getExtras();
-        int result = Integer.parseInt(arguments.get("result").toString());
+        int[] result = arguments.getIntArray("result");
+        int sizeTest = arguments.getInt("size");
 
         TextView textView1 = findViewById(R.id.textView1_id);
         TextView textView2 = findViewById(R.id.textView2_id);
@@ -27,57 +29,17 @@ public class ResultTest extends AppCompatActivity {
 
         Button buttonNext = findViewById(R.id.nextStage_id);
 
-        switch (result)
-        {
-            case 1:
-                textView1.setText(getString(R.string.biology));
-                textView2.setText(getString(R.string.farmer));
-                textView3.setText(getString(R.string.veterinarian));
-                textView4.setText(getString(R.string.phytopathologist));
-                textView5.setText(getString(R.string.microbiologist));
-                break;
-            case 2:
-                textView1.setText(getString(R.string.biology));
-                textView2.setText(getString(R.string.farmer));
-                textView3.setText(getString(R.string.veterinarian));
-                textView4.setText(getString(R.string.phytopathologist));
-                textView5.setText(getString(R.string.microbiologist));
-                break;
-            case 3:
-                textView1.setText(getString(R.string.biology));
-                textView2.setText(getString(R.string.farmer));
-                textView3.setText(getString(R.string.veterinarian));
-                textView4.setText(getString(R.string.phytopathologist));
-                textView5.setText(getString(R.string.microbiologist));
-                break;
-            case 4:
-                textView1.setText(getString(R.string.biology));
-                textView2.setText(getString(R.string.farmer));
-                textView3.setText(getString(R.string.veterinarian));
-                textView4.setText(getString(R.string.phytopathologist));
-                textView5.setText(getString(R.string.microbiologist));
-                break;
-            case 5:
-                textView1.setText(getString(R.string.biology));
-                textView2.setText(getString(R.string.farmer));
-                textView3.setText(getString(R.string.veterinarian));
-                textView4.setText(getString(R.string.phytopathologist));
-                textView5.setText(getString(R.string.microbiologist));
-                break;
-            default:
-                textView1.setText(getString(R.string.human_technology));
-                textView2.setText(getString(R.string.human_human));
-                textView3.setText(getString(R.string.human_nature));
-                textView4.setText(getString(R.string.human_sign));
-                textView5.setText(getString(R.string.human_art));
-                break;
-        }
+        textView1.setText(getString(R.string.human_technology));
+        textView2.setText(getString(R.string.human_human));
+        textView3.setText(getString(R.string.human_nature));
+        textView4.setText(getString(R.string.human_sign));
+        textView5.setText(getString(R.string.human_art));
 
         buttonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ResultTest.this, template_for_test.class);
-                intent.putExtra("first_test", "5");
+                intent.putExtra("first_test", maxProgress);
                 startActivity(intent);
             }
         });
@@ -87,6 +49,20 @@ public class ResultTest extends AppCompatActivity {
         ProgressBar progressBar3 = findViewById(R.id.progressBar3_id);
         ProgressBar progressBar4 = findViewById(R.id.progressBar4_id);
         ProgressBar progressBar5 = findViewById(R.id.progressBar5_id);
-        progressBar2.setProgress(40);
+
+        progressBar1.setProgress((int) ((result[0] / (float)sizeTest) * 100));
+        progressBar2.setProgress((int) ((result[1] / (float)sizeTest) * 100));
+        progressBar3.setProgress((int) ((result[2] / (float)sizeTest) * 100));
+        progressBar4.setProgress((int) ((result[3] / (float)sizeTest) * 100));
+        progressBar5.setProgress((int) ((result[4] / (float)sizeTest) * 100));
+
+        for (int i = 1; i < result.length; i++)
+        {
+            if (result[i] > result[maxProgress])
+            {
+                maxProgress = i;
+            }
+        }
+
     }
 }
