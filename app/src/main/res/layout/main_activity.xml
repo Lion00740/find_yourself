@@ -33,7 +33,7 @@
         app:layout_constraintBottom_toTopOf="@id/linearLayout">
 
         <Button
-            android:id="@+id/about_id"
+            android:id="@+id/button_about_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

@@ -8,18 +8,56 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class ResultTest extends AppCompatActivity {
     int maxProgress = 0;
+    ArrayList<String> stringArrayList = new ArrayList<String>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.result);
         getSupportActionBar().hide();
 
+        try {
+            InputStreamReader reader;
+            String nameTest;
+            nameTest = "result_info.txt";
+
+            reader = new InputStreamReader(getAssets().open(nameTest));
+            BufferedReader buffer = new BufferedReader(reader);
+            String lines;
+            StringBuffer strBuffer = new StringBuffer();
+
+            while ((lines = buffer.readLine()) != null) {
+                stringArrayList.add(lines);
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        Iterator<String> stringIterator = stringArrayList.iterator();
+        while(stringIterator.hasNext()) {//до тех пор, пока в списке есть элементы
+
+            String nextStr = stringIterator.next();//получаем следующий элемент
+            if (nextStr.equals("")) {
+                stringIterator.remove();//удаляем кота с нужным именем
+            }
+        }
+
         Bundle arguments = getIntent().getExtras();
         int[] result = arguments.getIntArray("result");
         int sizeTest = arguments.getInt("size");
+
+        RecyclerView recyclerView = findViewById(R.id.result_text_id);
+
+        TextAdapter textAdapter = new TextAdapter(this, stringArrayList);
+        recyclerView.setAdapter(textAdapter);
 
         TextView textView1 = findViewById(R.id.textView1_id);
         TextView textView2 = findViewById(R.id.textView2_id);
@@ -63,6 +101,5 @@ public class ResultTest extends AppCompatActivity {
                 maxProgress = i;
             }
         }
-
     }
 }

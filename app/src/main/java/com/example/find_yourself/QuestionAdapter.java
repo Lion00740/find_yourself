@@ -124,7 +124,6 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHo
             mass[3] += question.getAnswer(3);
             mass[4] += question.getAnswer(4);
         }
-        
         return mass;
     }
 }

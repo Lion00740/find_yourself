@@ -15,11 +15,12 @@ public class Main extends AppCompatActivity {
         setContentView(R.layout.main_activity);
         getSupportActionBar().hide();
         Button button = findViewById(R.id.go_test_id);
-        Button buttonAbout = findViewById(R.id.about_id);
+        Button buttonAbout = findViewById(R.id.button_about_id);
         buttonAbout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(Main.this, About_activity.class);
+                startActivity(intent);
             }
         });
         button.setOnClickListener(new View.OnClickListener() {
