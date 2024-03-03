@@ -9,9 +9,9 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:padding="2dp"
+        android:layout_marginBottom="15dp"
         android:gravity="center"
+        android:padding="2dp"
         android:weightSum="4"
         app:layout_constraintBottom_toBottomOf="parent">
 
@@ -20,6 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
             android:text="@string/start_button" />
     </LinearLayout>
 
@@ -37,6 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
             android:text="@string/about" />
     </LinearLayout>
 
@@ -55,10 +57,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/logo_id"
+        android:fontFamily="@font/roboto_regular"
         android:text="@string/hello"
         android:textAlignment="center"
+        android:textAllCaps="false"
         android:textColor="@color/purple_500"
         android:textSize="30dp"
+        android:typeface="normal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout_id"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

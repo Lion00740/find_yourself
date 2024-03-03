@@ -33,21 +33,12 @@ public class ResultTest extends AppCompatActivity {
             reader = new InputStreamReader(getAssets().open(nameTest));
             BufferedReader buffer = new BufferedReader(reader);
             String lines;
-            StringBuffer strBuffer = new StringBuffer();
 
             while ((lines = buffer.readLine()) != null) {
                 stringArrayList.add(lines);
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
-        }
-        Iterator<String> stringIterator = stringArrayList.iterator();
-        while(stringIterator.hasNext()) {//до тех пор, пока в списке есть элементы
-
-            String nextStr = stringIterator.next();//получаем следующий элемент
-            if (nextStr.equals("")) {
-                stringIterator.remove();//удаляем кота с нужным именем
-            }
         }
 
         Bundle arguments = getIntent().getExtras();

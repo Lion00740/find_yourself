@@ -5,6 +5,7 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -16,10 +17,9 @@ public class About_activity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.about_app_text);
+        setContentView(R.layout.about_activity);
         getSupportActionBar().hide();
-
-        TextView textView = findViewById(R.id.about_tv_id);
+        ArrayList<String> stringArrayList = new ArrayList<String>();
 
         try {
             InputStreamReader reader;
@@ -29,15 +29,17 @@ public class About_activity extends AppCompatActivity {
             reader = new InputStreamReader(getAssets().open(nameTest));
             BufferedReader buffer = new BufferedReader(reader);
             String lines;
-            StringBuffer strBuffer = new StringBuffer();
 
             while ((lines = buffer.readLine()) != null) {
-                strBuffer.append(lines + "\n");
+                stringArrayList.add(lines);
             }
-            textView.setText(strBuffer.toString());
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
+        RecyclerView recyclerView = findViewById(R.id.about_rv_id);
+        TextAdapter textAdapter = new TextAdapter(this, stringArrayList);
+        recyclerView.setAdapter(textAdapter);
     }
 }
