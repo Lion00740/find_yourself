@@ -19,12 +19,34 @@ public class About_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.about_activity);
         getSupportActionBar().hide();
+        Bundle argument = getIntent().getExtras();
+        int numberTest = argument.getInt("info");
         ArrayList<String> stringArrayList = new ArrayList<String>();
 
         try {
             InputStreamReader reader;
             String nameTest;
-            nameTest = "about_app.txt";
+
+            switch (numberTest)
+            {
+                case 0:
+                    nameTest = "about_human_nature.txt";
+                    break;
+                case 1:
+                    nameTest = "about_human_technology.txt";
+                    break;
+                case 2:
+                    nameTest = "about_human_human.txt";
+                    break;
+                case 3:
+                    nameTest = "about_human_sign.txt";
+                    break;
+                case 4:
+                    nameTest = "about_human_art.txt";
+                    break;
+                default:
+                    nameTest = "about_app.txt";
+            }
 
             reader = new InputStreamReader(getAssets().open(nameTest));
             BufferedReader buffer = new BufferedReader(reader);

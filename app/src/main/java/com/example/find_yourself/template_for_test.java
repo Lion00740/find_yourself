@@ -3,7 +3,7 @@ package com.example.find_yourself;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -33,15 +33,16 @@ public class template_for_test extends AppCompatActivity {
 
         recyclerView.setAdapter(questionAdapter);
 
-        ImageButton imageButton = findViewById(R.id.nextButton_id);
-        imageButton.setOnClickListener(new View.OnClickListener() {
+        Button button = findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(template_for_test.this, ResultTest.class);
-                if (numberOfNextTest == -1) {
-                    intent.putExtra("result", questionAdapter.getArrayAnswer());
-                    intent.putExtra("size", questionArrayList.size());
-                }
+
+                intent.putExtra("result", questionAdapter.getArrayAnswer());
+                intent.putExtra("size", questionArrayList.size());
+                intent.putExtra("numberTest", numberOfNextTest);
+
                 startActivity(intent);
             }
         });
@@ -55,13 +56,13 @@ public class template_for_test extends AppCompatActivity {
             switch (numberTest)
             {
                 case 0:
-                    nameTest = "human_technology.txt";
+                    nameTest = "human_nature.txt";
                     break;
                 case 1:
-                    nameTest = "human_human.txt";
+                    nameTest = "human_technology.txt";
                     break;
                 case 2:
-                    nameTest = "human_nature.txt";
+                    nameTest = "human_human.txt";
                     break;
                 case 3:
                     nameTest = "human_sign.txt";

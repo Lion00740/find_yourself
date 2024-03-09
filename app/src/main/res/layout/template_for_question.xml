@@ -12,10 +12,12 @@
         android:id="@+id/question_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        android:fontFamily="@font/roboto_regular"
         android:gravity="center"
         android:textColor="@color/white"
         android:textSize="25sp"
-        android:background="@color/purple_500"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,38 +34,53 @@
 
         <RadioButton
             android:id="@+id/rb1_id"
-            android:textColor="@color/white"
+            android:layout_margin="5dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:buttonTint="@color/white"/>
+            android:buttonTint="@color/white"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/rb2_id"
-            android:textColor="@color/white"
+            android:layout_margin="5dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:buttonTint="@color/white" />
+            android:buttonTint="@color/white"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/rb3_id"
-            android:textColor="@color/white"
+            android:layout_margin="5dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:buttonTint="@color/white" />
+            android:buttonTint="@color/white"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/rb4_id"
-            android:textColor="@color/white"
+            android:layout_margin="5dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:buttonTint="@color/white" />
+            android:buttonTint="@color/white"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/rb5_id"
-            android:textColor="@color/white"
+            android:layout_margin="5dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:buttonTint="@color/white" />
+            android:buttonTint="@color/white"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
     </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

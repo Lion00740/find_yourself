@@ -20,6 +20,7 @@ public class Main extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Main.this, About_activity.class);
+                intent.putExtra("info", -1);
                 startActivity(intent);
             }
         });

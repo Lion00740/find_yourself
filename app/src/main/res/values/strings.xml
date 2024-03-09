@@ -7,14 +7,13 @@
     <string name="about">о приложении</string>
     <!-- main screen end -->
 
-    <!-- tests screen start -->
-    <string name="first_test">профессии</string>
-    <string name="second_test">второй тест</string>
-    <string name="third_test">третий тест</string>
-    <string name="fourth_test">четвертый тест</string>
-    <!-- tests screen end -->
+    <!-- test screen start -->
+    <string name="result">узнать результаты</string>
+    <!-- test screen end -->
 
     <!-- result screen start -->
+    <string name="check_info">специальности</string>
+    <string name="yours_result">Ваши результаты:</string>
     <string name="human_nature">человек-природа</string>
     <string name="human_human">человек-человек</string>
     <string name="human_technology">человек-техника</string>

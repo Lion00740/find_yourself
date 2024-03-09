@@ -8,8 +8,11 @@
     <TextView
         android:id="@+id/about_tv_id"
         android:layout_width="0dp"
+
         android:layout_height="wrap_content"
+        android:background="@color/purple_500"
         android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

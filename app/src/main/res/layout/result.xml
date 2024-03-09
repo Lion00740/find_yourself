@@ -13,7 +13,7 @@
         android:background="@drawable/round_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/content_start"
@@ -42,7 +42,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@color/purple_500"
+            android:fontFamily="@font/roboto_regular"
             android:textColor="@color/white"
+            android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/content_percent_50"
             app:layout_constraintStart_toStartOf="@+id/content_start"
             app:layout_constraintTop_toBottomOf="@+id/textView1_id" />
@@ -53,7 +55,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@color/purple_500"
+            android:fontFamily="@font/roboto_regular"
             android:textColor="@color/white"
+            android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/content_percent_50"
             app:layout_constraintStart_toStartOf="@+id/content_start"
             app:layout_constraintTop_toBottomOf="@+id/textView2_id" />
@@ -64,7 +68,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@color/purple_500"
+            android:fontFamily="@font/roboto_regular"
             android:textColor="@color/white"
+            android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/content_percent_50"
             app:layout_constraintStart_toStartOf="@+id/content_start"
             app:layout_constraintTop_toTopOf="parent" />
@@ -75,7 +81,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@color/purple_500"
+            android:fontFamily="@font/roboto_regular"
             android:textColor="@color/white"
+            android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/content_percent_50"
             app:layout_constraintStart_toStartOf="@+id/content_start"
             app:layout_constraintTop_toBottomOf="@+id/textView3_id" />
@@ -87,7 +95,9 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@color/purple_500"
+            android:fontFamily="@font/roboto_regular"
             android:textColor="@color/white"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/content_percent_50"
             app:layout_constraintStart_toStartOf="@+id/content_start"
@@ -99,6 +109,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@color/purple_500"
+            android:progressTint="@color/white"
             app:layout_constraintBottom_toBottomOf="@+id/textView1_id"
             app:layout_constraintEnd_toStartOf="@+id/content_end"
             app:layout_constraintStart_toStartOf="@+id/content_percent_50"
@@ -110,6 +121,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@color/purple_500"
+            android:progressTint="@color/white"
             app:layout_constraintBottom_toBottomOf="@+id/textView4_id"
             app:layout_constraintEnd_toStartOf="@+id/content_end"
             app:layout_constraintStart_toStartOf="@+id/content_percent_50"
@@ -121,6 +133,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@color/purple_500"
+            android:progressTint="@color/white"
             app:layout_constraintBottom_toBottomOf="@+id/textView3_id"
             app:layout_constraintEnd_toStartOf="@+id/content_end"
             app:layout_constraintStart_toStartOf="@+id/content_percent_50"
@@ -132,6 +145,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@color/purple_500"
+            android:progressTint="@color/white"
             app:layout_constraintBottom_toBottomOf="@+id/textView2_id"
             app:layout_constraintEnd_toStartOf="@+id/content_end"
             app:layout_constraintStart_toStartOf="@+id/content_percent_50"
@@ -143,31 +157,80 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@color/purple_500"
+            android:progressTint="@color/white"
             app:layout_constraintBottom_toBottomOf="@+id/textView5_id"
             app:layout_constraintEnd_toStartOf="@+id/content_end"
             app:layout_constraintStart_toStartOf="@+id/content_percent_50"
             app:layout_constraintTop_toTopOf="@+id/textView5_id" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/button_section_bottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="nextStage_id, info_id" />
+
     <Button
         android:id="@+id/nextStage_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
+        android:fontFamily="@font/roboto_regular"
         android:text="@string/next_stage"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/result_text_id"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="15dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toTopOf="@+id/nextStage_id"
+        android:background="@drawable/round_bg"
+        app:layout_constraintBottom_toTopOf="@+id/button_section_bottom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/result_text_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/purple_500"
+            android:layout_margin="16dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <Button
+        android:id="@+id/info_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/check_info"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/nextStage_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/round_bg"
+        android:fontFamily="@font/roboto_regular"
+        android:padding="8dp"
+        android:text="@string/yours_result"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
