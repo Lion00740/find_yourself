@@ -9,11 +9,15 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:layout_marginBottom="15dp"
         android:gravity="center"
         android:padding="2dp"
         android:weightSum="4"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/go_test_id"
@@ -29,10 +33,14 @@
         android:id="@+id/linearLayout_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:gravity="center"
-        android:weightSum="8"
         android:padding="2dp"
-        app:layout_constraintBottom_toTopOf="@id/linearLayout">
+        android:weightSum="8"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/button_about_id"
@@ -48,17 +56,18 @@
         android:id="@+id/logo_id"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:paddingBottom="24dp"
         android:scaleType="fitCenter"
         android:src="@drawable/image_logo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/logo_id"
+        android:layout_margin="15dp"
         android:fontFamily="@font/roboto_regular"
         android:text="@string/hello"
         android:textAlignment="center"

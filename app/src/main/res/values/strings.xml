@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">find_yourself</string>
+    <string name="app_name">Найти себя</string>
     <string name="start_button">пройти тестирование</string>
 
     <!-- main screen start -->
@@ -14,11 +14,11 @@
     <!-- result screen start -->
     <string name="check_info">специальности</string>
     <string name="yours_result">Ваши результаты:</string>
-    <string name="human_nature">человек-природа</string>
-    <string name="human_human">человек-человек</string>
-    <string name="human_technology">человек-техника</string>
-    <string name="human_sign">человек-знаковая система</string>
-    <string name="human_art">человек-художественный образ</string>
+    <string name="human_nature">Человек-природа</string>
+    <string name="human_human">Человек-человек</string>
+    <string name="human_technology">Человек-техника</string>
+    <string name="human_sign">Человек-знаковая система</string>
+    <string name="human_art">Человек-художественный образ</string>
     <string name="next_stage">следующий этап</string>
     <!-- result screen end -->
     

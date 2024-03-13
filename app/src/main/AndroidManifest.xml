@@ -12,12 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Find_yourself"
         tools:targetApi="31" >
-        <activity android:name=".About_activity" />
-        <activity android:name=".template_for_test"/>
-        <activity android:name=".ResultTest"/>
+        <activity android:name=".About_activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".template_for_test"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ResultTest"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Main"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

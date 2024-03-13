@@ -37,10 +37,23 @@
             app:layout_constraintGuide_percent="0.50121653" />
 
         <TextView
+            android:id="@+id/textView1_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/purple_500"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/content_percent_50"
+            app:layout_constraintStart_toStartOf="@+id/content_start"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
             android:id="@+id/textView2_id"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:background="@color/purple_500"
             android:fontFamily="@font/roboto_regular"
             android:textColor="@color/white"
@@ -53,7 +66,7 @@
             android:id="@+id/textView3_id"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:background="@color/purple_500"
             android:fontFamily="@font/roboto_regular"
             android:textColor="@color/white"
@@ -63,23 +76,10 @@
             app:layout_constraintTop_toBottomOf="@+id/textView2_id" />
 
         <TextView
-            android:id="@+id/textView1_id"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@color/purple_500"
-            android:fontFamily="@font/roboto_regular"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/content_percent_50"
-            app:layout_constraintStart_toStartOf="@+id/content_start"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
             android:id="@+id/textView4_id"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:background="@color/purple_500"
             android:fontFamily="@font/roboto_regular"
             android:textColor="@color/white"
@@ -92,7 +92,7 @@
             android:id="@+id/textView5_id"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:layout_marginBottom="10dp"
             android:background="@color/purple_500"
             android:fontFamily="@font/roboto_regular"
@@ -115,29 +115,20 @@
             app:layout_constraintStart_toStartOf="@+id/content_percent_50"
             app:layout_constraintTop_toTopOf="@+id/textView1_id" />
 
-        <ProgressBar
-            android:id="@+id/progressBar4_id"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="0dp"
+        <TextView
+            android:id="@+id/tv_progress_horizontal1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/purple_500"
-            android:progressTint="@color/white"
-            app:layout_constraintBottom_toBottomOf="@+id/textView4_id"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar1_id"
             app:layout_constraintEnd_toStartOf="@+id/content_end"
-            app:layout_constraintStart_toStartOf="@+id/content_percent_50"
-            app:layout_constraintTop_toTopOf="@+id/textView4_id" />
-
-        <ProgressBar
-            android:id="@+id/progressBar3_id"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="@color/purple_500"
-            android:progressTint="@color/white"
-            app:layout_constraintBottom_toBottomOf="@+id/textView3_id"
-            app:layout_constraintEnd_toStartOf="@+id/content_end"
-            app:layout_constraintStart_toStartOf="@+id/content_percent_50"
-            app:layout_constraintTop_toTopOf="@+id/textView3_id" />
+            app:layout_constraintStart_toStartOf="@id/content_percent_50"
+            app:layout_constraintTop_toTopOf="@+id/progressBar1_id" />
 
         <ProgressBar
             android:id="@+id/progressBar2_id"
@@ -151,6 +142,75 @@
             app:layout_constraintStart_toStartOf="@+id/content_percent_50"
             app:layout_constraintTop_toTopOf="@+id/textView2_id" />
 
+        <TextView
+            android:id="@+id/tv_progress_horizontal2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar2_id"
+            app:layout_constraintEnd_toStartOf="@+id/content_end"
+            app:layout_constraintStart_toStartOf="@id/content_percent_50"
+            app:layout_constraintTop_toTopOf="@+id/progressBar2_id"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar3_id"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_500"
+            android:progressTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/textView3_id"
+            app:layout_constraintEnd_toStartOf="@+id/content_end"
+            app:layout_constraintStart_toStartOf="@+id/content_percent_50"
+            app:layout_constraintTop_toTopOf="@+id/textView3_id" />
+
+        <TextView
+            android:id="@+id/tv_progress_horizontal3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar3_id"
+            app:layout_constraintEnd_toStartOf="@+id/content_end"
+            app:layout_constraintStart_toStartOf="@id/content_percent_50"
+            app:layout_constraintTop_toTopOf="@+id/progressBar3_id"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar4_id"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_500"
+            android:progressTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/textView4_id"
+            app:layout_constraintEnd_toStartOf="@+id/content_end"
+            app:layout_constraintStart_toStartOf="@+id/content_percent_50"
+            app:layout_constraintTop_toTopOf="@+id/textView4_id" />
+
+        <TextView
+            android:id="@+id/tv_progress_horizontal4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar4_id"
+            app:layout_constraintEnd_toStartOf="@+id/content_end"
+            app:layout_constraintStart_toStartOf="@id/content_percent_50"
+            app:layout_constraintTop_toTopOf="@+id/progressBar4_id"/>
+
         <ProgressBar
             android:id="@+id/progressBar5_id"
             style="?android:attr/progressBarStyleHorizontal"
@@ -162,6 +222,22 @@
             app:layout_constraintEnd_toStartOf="@+id/content_end"
             app:layout_constraintStart_toStartOf="@+id/content_percent_50"
             app:layout_constraintTop_toTopOf="@+id/textView5_id" />
+
+        <TextView
+            android:id="@+id/tv_progress_horizontal5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar5_id"
+            app:layout_constraintEnd_toStartOf="@+id/content_end"
+            app:layout_constraintStart_toStartOf="@id/content_percent_50"
+            app:layout_constraintTop_toTopOf="@+id/progressBar5_id"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.Barrier

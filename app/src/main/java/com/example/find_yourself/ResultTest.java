@@ -157,11 +157,23 @@ public class ResultTest extends AppCompatActivity {
         ProgressBar progressBar4 = findViewById(R.id.progressBar4_id);
         ProgressBar progressBar5 = findViewById(R.id.progressBar5_id);
 
+        TextView procent1 = findViewById(R.id.tv_progress_horizontal1);
+        TextView procent2 = findViewById(R.id.tv_progress_horizontal2);
+        TextView procent3 = findViewById(R.id.tv_progress_horizontal3);
+        TextView procent4 = findViewById(R.id.tv_progress_horizontal4);
+        TextView procent5 = findViewById(R.id.tv_progress_horizontal5);
+
         progressBar1.setProgress((int) ((result[0] / (float)sizeTest) * 100));
         progressBar2.setProgress((int) ((result[1] / (float)sizeTest) * 100));
         progressBar3.setProgress((int) ((result[2] / (float)sizeTest) * 100));
         progressBar4.setProgress((int) ((result[3] / (float)sizeTest) * 100));
         progressBar5.setProgress((int) ((result[4] / (float)sizeTest) * 100));
+
+        procent1.setText(Integer.toString((int) ((result[0] / (float)sizeTest) * 100)) + "%");
+        procent2.setText(Integer.toString((int) ((result[1] / (float)sizeTest) * 100)) + "%");
+        procent3.setText(Integer.toString((int) ((result[2] / (float)sizeTest) * 100)) + "%");
+        procent4.setText(Integer.toString((int) ((result[3] / (float)sizeTest) * 100)) + "%");
+        procent5.setText(Integer.toString((int) ((result[4] / (float)sizeTest) * 100)) + "%");
 
         for (int i = 0; i < result.length; i++)
         {
