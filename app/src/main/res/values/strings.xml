@@ -1,3 +1,64 @@
 <resources>
-    <string name="app_name">find_yourself</string>
+    <string name="app_name">Найти себя</string>
+    <string name="start_button">пройти тестирование</string>
+
+    <!-- main screen start -->
+    <string name="hello">Мы поможем тебе найти себя!</string>
+    <string name="about">о приложении</string>
+    <!-- main screen end -->
+
+    <!-- test screen start -->
+    <string name="result">узнать результаты</string>
+    <!-- test screen end -->
+
+    <!-- result screen start -->
+    <string name="check_info">специальности</string>
+    <string name="yours_result">Ваши результаты:</string>
+    <string name="human_nature">Человек-природа</string>
+    <string name="human_human">Человек-человек</string>
+    <string name="human_technology">Человек-техника</string>
+    <string name="human_sign">Человек-знаковая система</string>
+    <string name="human_art">Человек-художественный образ</string>
+    <string name="next_stage">следующий этап</string>
+    <!-- result screen end -->
+    
+    <!-- result screen if human_nature.txt start -->
+    <string name="biology">Изучение живой и неживой природы</string>
+    <string name="farmer">Уход за растениями</string>
+    <string name="veterinarian">Уход за животными</string>
+    <string name="phytopathologist">Профилактика и лечения заболеваний растений</string>
+    <string name="microbiologist">Профилактика и лечения заболеваний животных</string>
+    <!-- result screen if human_nature.txt end -->
+
+    <!-- result screen if human_art.txt start -->
+    <string name="actor">Создание художественных произведений</string>
+    <string name="travel_agent">Проектирование художественных произведений</string>
+    <string name="web_designer">Моделирование художественных произведений</string>
+    <string name="photographer">Воспроизведение различных изделий по эскизу, образцу</string>
+    <string name="architect">Изготовлением различных изделий по эскизу, образцу</string>
+    <!-- result screen if human_art.txt end -->
+
+    <!-- result screen if human_human.txt start -->
+    <string name="doctor">Медицина</string>
+    <string name="coach">Обучение</string>
+    <string name="mentor">Воспитание</string>
+    <string name="cook">Бытовое обслуживание</string>
+    <string name="policeman">Правовая защита</string>
+    <!-- result screen if human_human.txt end -->
+
+    <!-- result screen if human_sign.txt start -->
+    <string name="editor">Тексты</string>
+    <string name="analyst">Цифры, формулы и таблицы</string>
+    <string name="engineer">Чертежи, карты, схемы</string>
+    <string name="sound_producer">Звуковые сигналы</string>
+    <string name="developer">Программирование</string>
+    <!-- result screen if human_sign.txt end -->
+
+    <!-- result screen if human_technology.txt start -->
+    <string name="mechanic">Создание и наладка техники</string>
+    <string name="machinist">Эксплуатация технических средств</string>
+    <string name="electrician">Ремонт техники</string>
+    <string name="videographer">Монтаж техники</string>
+    <string name="system_administrator">Сборка техники</string>
+    <!-- result screen if human_technology.txt end -->
 </resources>

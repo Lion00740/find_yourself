@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/round_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/content_start"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/content_end"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/content_percent_50"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50121653" />
+
+        <TextView
+            android:id="@+id/textView1_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/purple_500"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/content_percent_50"
+            app:layout_constraintStart_toStartOf="@+id/content_start"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/purple_500"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/content_percent_50"
+            app:layout_constraintStart_toStartOf="@+id/content_start"
+            app:layout_constraintTop_toBottomOf="@+id/textView1_id" />
+
+        <TextView
+            android:id="@+id/textView3_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/purple_500"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/content_percent_50"
+            app:layout_constraintStart_toStartOf="@+id/content_start"
+            app:layout_constraintTop_toBottomOf="@+id/textView2_id" />
+
+        <TextView
+            android:id="@+id/textView4_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/purple_500"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/content_percent_50"
+            app:layout_constraintStart_toStartOf="@+id/content_start"
+            app:layout_constraintTop_toBottomOf="@+id/textView3_id" />
+
+        <TextView
+            android:id="@+id/textView5_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/purple_500"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/content_percent_50"
+            app:layout_constraintStart_toStartOf="@+id/content_start"
+            app:layout_constraintTop_toBottomOf="@+id/textView4_id" />
+
+        <ProgressBar
+            android:id="@+id/progressBar1_id"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_500"
+            android:progressTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/textView1_id"
+            app:layout_constraintEnd_toStartOf="@+id/content_end"
+            app:layout_constraintStart_toStartOf="@+id/content_percent_50"
+            app:layout_constraintTop_toTopOf="@+id/textView1_id" />
+
+        <TextView
+            android:id="@+id/tv_progress_horizontal1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar1_id"
+            app:layout_constraintEnd_toStartOf="@+id/content_end"
+            app:layout_constraintStart_toStartOf="@id/content_percent_50"
+            app:layout_constraintTop_toTopOf="@+id/progressBar1_id" />
+
+        <ProgressBar
+            android:id="@+id/progressBar2_id"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_500"
+            android:progressTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2_id"
+            app:layout_constraintEnd_toStartOf="@+id/content_end"
+            app:layout_constraintStart_toStartOf="@+id/content_percent_50"
+            app:layout_constraintTop_toTopOf="@+id/textView2_id" />
+
+        <TextView
+            android:id="@+id/tv_progress_horizontal2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar2_id"
+            app:layout_constraintEnd_toStartOf="@+id/content_end"
+            app:layout_constraintStart_toStartOf="@id/content_percent_50"
+            app:layout_constraintTop_toTopOf="@+id/progressBar2_id"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar3_id"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_500"
+            android:progressTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/textView3_id"
+            app:layout_constraintEnd_toStartOf="@+id/content_end"
+            app:layout_constraintStart_toStartOf="@+id/content_percent_50"
+            app:layout_constraintTop_toTopOf="@+id/textView3_id" />
+
+        <TextView
+            android:id="@+id/tv_progress_horizontal3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar3_id"
+            app:layout_constraintEnd_toStartOf="@+id/content_end"
+            app:layout_constraintStart_toStartOf="@id/content_percent_50"
+            app:layout_constraintTop_toTopOf="@+id/progressBar3_id"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar4_id"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_500"
+            android:progressTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/textView4_id"
+            app:layout_constraintEnd_toStartOf="@+id/content_end"
+            app:layout_constraintStart_toStartOf="@+id/content_percent_50"
+            app:layout_constraintTop_toTopOf="@+id/textView4_id" />
+
+        <TextView
+            android:id="@+id/tv_progress_horizontal4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar4_id"
+            app:layout_constraintEnd_toStartOf="@+id/content_end"
+            app:layout_constraintStart_toStartOf="@id/content_percent_50"
+            app:layout_constraintTop_toTopOf="@+id/progressBar4_id"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar5_id"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_500"
+            android:progressTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/textView5_id"
+            app:layout_constraintEnd_toStartOf="@+id/content_end"
+            app:layout_constraintStart_toStartOf="@+id/content_percent_50"
+            app:layout_constraintTop_toTopOf="@+id/textView5_id" />
+
+        <TextView
+            android:id="@+id/tv_progress_horizontal5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar5_id"
+            app:layout_constraintEnd_toStartOf="@+id/content_end"
+            app:layout_constraintStart_toStartOf="@id/content_percent_50"
+            app:layout_constraintTop_toTopOf="@+id/progressBar5_id"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/button_section_bottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="nextStage_id, info_id" />
+
+    <Button
+        android:id="@+id/nextStage_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/next_stage"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/round_bg"
+        app:layout_constraintBottom_toTopOf="@+id/button_section_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/result_text_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/purple_500"
+            android:layout_margin="16dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <Button
+        android:id="@+id/info_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/check_info"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/nextStage_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/round_bg"
+        android:fontFamily="@font/roboto_regular"
+        android:padding="8dp"
+        android:text="@string/yours_result"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
